@@ -44,7 +44,11 @@ AFRICA_KEYWORDS = [
     'sahel', 'maghreb', 'african union', 'ecowas', 'sadc', 'eac'
 ]
 
-# Dashboard Configuration
-DASHBOARD_TITLE = "SAM.gov Africa Opportunities Dashboard"
+# Enhanced Configuration for Historical Data Collection
+DASHBOARD_TITLE = "SAM.gov Africa Opportunities Dashboard - Complete Historical Database"
 UPDATE_INTERVAL_HOURS = int(os.getenv('UPDATE_INTERVAL_HOURS', 6))
 
+# Historical data collection settings
+HISTORICAL_YEARS_BACK = int(os.getenv('HISTORICAL_YEARS_BACK', 10))  # Default 10 years back
+MAX_RESULTS_PER_REQUEST = 1000
+SAM_GOV_OPPORTUNITY_BASE_URL = "https://sam.gov/opp/"
